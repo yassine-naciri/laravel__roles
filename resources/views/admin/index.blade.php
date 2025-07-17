@@ -13,10 +13,10 @@
                     <th class="text-left p-3 px-5">Name</th>
                     <th class="text-left p-3 px-5">Email</th>
                     <th class="text-left p-3 px-5">Role</th>
-     
+
                 </tr>
                 @foreach($users as $user)
-                <tr class="border-b hover:bg-orange-100 bg-gray-100">
+                <tr class="border-b hover:bg-gray-200 bg-gray-100">
                     <td class="p-3 px-5">
                         {{ $user->name }}
                     </td>
