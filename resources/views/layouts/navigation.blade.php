@@ -16,6 +16,31 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+
+
+                            @role('customer')
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('customer.dashboard')" :active="request()->routeIs('customer.dashboard')">
+                        {{ __('Products') }}
+                    </x-nav-link>
+                </div>
+
+            @endrole
+
+
+              @role('seller')
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('seller.products.create')" :active="request()->routeIs('seller.products.create')">
+                        {{ __('Sell') }}
+                    </x-nav-link>
+                </div>
+
+            @endrole
+
+
+
+
             </div>
 
             <!-- Settings Dropdown -->
